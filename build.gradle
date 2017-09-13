@@ -7,6 +7,9 @@ buildscript {
     //自定义 Thymeleaf 和 Thymeleaf Layout Dialect 的版本
     ext['thymeleaf.version'] = '3.0.3.RELEASE'
     ext['thymeleaf-layout-dialect.version'] = '2.2.0'
+    //自定义hibernate版本
+    ext['hibernate.version'] = '5.2.8.Final'
+
 
     //使用阿里云maven中央仓库
     repositories {
@@ -38,6 +41,12 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-web')
     //添加Thymeleaf的依赖
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+    //添加Srping Data JPA 的依赖
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+//添加mysql连接驱动的依赖
+    compile('mysql:mysql-connector-java:6.0.5')
+    //添加h2数据库的依赖
+    runtime('com.h2database:h2:1.4.193')
     //该依赖对于编译测试时必须的,默认包含变异产品依赖和编译时依
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
