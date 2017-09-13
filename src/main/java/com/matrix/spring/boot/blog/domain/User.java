@@ -1,19 +1,27 @@
 package com.matrix.spring.boot.blog.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * @Description User实体
  * @Author 李迪凡[xhyrzldf@foxmail.com]
  * @Date 2017/9/13 13:35
  */
+@Entity
 public class User {
 
+    @Id//主键
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //自增长策略
     private Long id;
 
     private String name;
 
     private String email;
 
-    public User() {
+    protected User() {//无直接构造函数,防止直接构造
     }
 
     public User(Long id, String name, String email) {
@@ -47,5 +55,14 @@ public class User {
     public User setEmail(String email) {
         this.email = email;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
