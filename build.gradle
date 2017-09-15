@@ -42,14 +42,14 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-thymeleaf')
     //添加Spring Data JPA 的依赖
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    //添加Spring Data ElasticSearch 的依赖
+    compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
+    //添加JNA的依赖
+    compile('net.java.dev.jna:jna:4.3.0')
     //添加mysql连接驱动的依赖
     compile('mysql:mysql-connector-java:6.0.5')
     //添加h2数据库的依赖
     runtime('com.h2database:h2:1.4.193')
-    //添加Spring Data ElasticSearch 的依赖
-    compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
-    //添加JNA的依赖
-    complie('net.java.dev.jna:jna:4.3.0')
     //该依赖对于编译测试时必须的,默认包含变异产品依赖和编译时依
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
