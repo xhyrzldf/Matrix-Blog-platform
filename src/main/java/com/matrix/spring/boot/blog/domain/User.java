@@ -10,7 +10,7 @@ import javax.persistence.Id;
  * @Author 李迪凡[xhyrzldf@foxmail.com]
  * @Date 2017/9/13 13:35
  */
-@Entity
+@Entity//jpa规范 实体类上必须要加@entity注解
 public class User {
 
     @Id//主键
@@ -21,7 +21,7 @@ public class User {
 
     private String email;
 
-    protected User() {//无直接构造函数,防止直接构造
+    protected User() {//无直接构造函数,防止直接构造,JPA规范
     }
 
     public User(Long id, String name, String email) {

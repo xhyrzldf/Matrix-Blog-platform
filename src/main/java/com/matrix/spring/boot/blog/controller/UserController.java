@@ -32,14 +32,13 @@ public class UserController {
         return new ModelAndView("users/list", "userModel", model);
     }
 
-
     /**
      * get user by id
      *
      * @param model model
      * @return model and view
      */
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ModelAndView view(@PathVariable("id") Long id, Model model) {
         User user = userRepository.findOne(id);
         model.addAttribute("user", user);
@@ -85,7 +84,6 @@ public class UserController {
 
     @RequestMapping(value = "/hello")
     public String hello() {
-
         return "Hello World!";
     }
 }
