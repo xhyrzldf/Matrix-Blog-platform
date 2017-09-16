@@ -1,8 +1,8 @@
 package com.matrix.spring.boot.esblog.domain.es;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
-import javax.persistence.Id;
 import java.io.Serializable;
 /**
 * <h1>class_name: EsBlog</h1>
