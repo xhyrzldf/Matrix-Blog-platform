@@ -4,6 +4,7 @@ import com.matrix.spring.boot.esblog.domain.es.EsBlog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+
 /**
 * <h1>class_name: EsBlogRepository</h1>
 * <ul>describe: EsBlog Repository 接口</ul>
