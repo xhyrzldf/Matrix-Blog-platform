@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:replace="~{fragments/header :: header}">
 </head>
 <body>
-<div th:replace="~{fragments/header :: header}"></div>
-<h3 th:text="${userModel.title}"></h3>
-<form action="/users" th:action="@{/users}" method="post" th:object="${userModel.user}">
-    <input type="hidden" name="id" th:value="*{id}">
-    名称:<br>
-    <input type="text" name="name" th:value="*{name}"><br>
-    邮箱:<br>
-    <input type="email" name="email" th:value="*{email}">
-    <input type="submit" value="提交">
-</form>
+<!-- Page content -->
+<div class="container blog-content-container">
+
+    <h3 th:text="${userModel.title}">Matrix</h3>
+    <form action="/users" th:action="@{/users}" method="post" th:object="${userModel.user}">
+        <div class="form-group">
+            <input type="hidden" name="id" th:value="*{id}">
+        </div>
+
+        <div class="form-group">
+            名称:<br>
+            <input type="text" class="form-control" name="name" placeholder="Mr.  Neo" th:value="*{name}"><br>
+        </div>
+
+        <div class="form-group">
+            邮箱:<br>
+            <input type="email" class="form-control" name="email" placeholder="matrix@gmail.com" th:value="*{email}">
+        </div>
+
+        <input type="submit" class="btn btn-default" value="提交">
+    </form>
+</div> <!-- /.container-->
 <div th:replace="~{fragments/footer :: footer}"></div>
 </body>
 </html>

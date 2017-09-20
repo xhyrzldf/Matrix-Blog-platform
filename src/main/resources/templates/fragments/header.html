@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      th:fragment="header">
+      th:fragment="header" >
 <head>
     <meta charset="UTF-8">
+    <title>矩阵世界!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--Tether core Css-->
@@ -36,30 +37,35 @@
     <!--Custom styles-->
     <link rel="stylesheet" href="../../css/style.css" th:href="@{/css/style.css}">
 
-
+    <!--My Blog Css-->
+    <link rel="stylesheet" href="../../css/blog.css" th:href="@{/css/blog.css}">
 </head>
 <body>
-<div>
-    <h1>Thymeleaf in action</h1>
-    <a href="/users" th:href="@{~/users}">首页</a>
-</div>
-<nav class="navbar navbar-inverse navbar-toggleable-md" style="background: #1d2124;height: 50px">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarsContainer">
+
+        <a class="navbar-brand" href="#" th:href="@{~/}">MATRIX-BLOG</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="/" th:href="@{~/}">StarBlog</a>
-
-        <div class="collapse navbar-collapse" id="navbarsContainer">
-
-            <ul class="navbar-nav mr-auto">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav" style="font-family: -apple-system;font-size: 18px">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/users" th:href="@{~/users}">首页 <span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{~/users}">首页</a>
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
         </div>
-
     </div>
 </nav>
 </body>

@@ -52,4 +52,6 @@ dependencies {
     runtime('com.h2database:h2:1.4.193')
     //该依赖对于编译测试时必须的,默认包含变异产品依赖和编译时依
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    //热部署
+    compile("org.springframework.boot:spring-boot-devtools")
 }
