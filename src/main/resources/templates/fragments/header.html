@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      th:fragment="header">
 <head>
     <meta charset="UTF-8">
-    <title>Thymeleaf in action</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Tether core Css-->
+    <link rel="stylesheet" href="../../css/tether.min.css" th:href="@{/css/thether.min.css}">
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+
+    <!--Font-Awesome CSS-->
+    <link rel="stylesheet" href="../../css/font-awesome.min.css" th:href="@{/css/font-awesome.min.css}">
+
+    <!--NProgress CSS-->
+    <link rel="stylesheet" href="../../css/nprogress.css" th:href="@{/css/nprogress.css}">
+
+    <!--thinker-md CSS-->
+    <link rel="stylesheet" href="../../css/thinker-md.vendor.css" th:href="@{/css/thinker-md.vendor.css}">
+
+    <!--bootstrap tags CSS-->
+    <link rel="stylesheet" href="../../css/jquery.tagsinput.min.css" th:href="@{/css/jquery.tagsinput.min.css}">
+
+    <!--bootstrap chosen CSS-->
+    <link rel="stylesheet" href="../../css/component-chosen.css" th:href="@{/css/component-chosen.css}">
+
+    <!--toastr CSS-->
+    <link rel="stylesheet" href="../../css/toastr.min.css" th:href="@{/css/toastr.min.css}">
+
+    <!--jQuery image cropping plugin CSS-->
+    <link rel="stylesheet" href="../../css/toastr.min.css" th:href="@{/css/toastr.min.css}">
+
+    <!--Custom styles-->
+    <link rel="stylesheet" href="../../css/style.css" th:href="@{/css/style.css}">
+
+
 </head>
 <body>
-<div th:fragment="header">
+<div>
     <h1>Thymeleaf in action</h1>
     <a href="/users" th:href="@{~/users}">首页</a>
 </div>
+<nav class="navbar navbar-inverse navbar-toggleable-md" style="background: #1d2124;height: 50px">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarsContainer">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/" th:href="@{~/}">StarBlog</a>
+
+        <div class="collapse navbar-collapse" id="navbarsContainer">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{~/users}">首页</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
 </body>
 </html>
