@@ -44,6 +44,10 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     //添加Spring Data ElasticSearch 的依赖
     compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
+    //添加Spring Security依赖
+    compile('org.springframework.boot:spring-boot-starter-security')
+    //添加Thymeleaf Spring Security依赖
+    compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity4:3.0.2.RELEASE')
     //添加JNA的依赖
     compile('net.java.dev.jna:jna:4.3.0')
     //添加mysql连接驱动的依赖
