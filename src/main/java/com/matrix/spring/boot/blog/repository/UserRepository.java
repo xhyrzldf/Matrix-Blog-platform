@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @Description User Repository Interface
- * @Author 李迪凡[xhyrzldf@foxmail.com]
+ * @Author Matrix[xhyrzldf@foxmail.com]
  * @Date 2017/9/13 13:39
  */
 public interface UserRepository extends CrudRepository<User, Long> {

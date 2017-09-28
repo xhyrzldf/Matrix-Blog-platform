@@ -7,7 +7,7 @@ import javax.persistence.Id;
 
 /**
  * @Description User实体
- * @Author 李迪凡[xhyrzldf@foxmail.com]
+ * @Author Matrix[xhyrzldf@foxmail.com]
  * @Date 2017/9/13 13:35
  */
 @Entity//jpa规范 实体类上必须要加@entity注解
